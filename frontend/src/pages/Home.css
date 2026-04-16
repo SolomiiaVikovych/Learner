@@ -1,0 +1,111 @@
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.home h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--text);
+}
+
+.create-form {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create-form h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  align-self: flex-start;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.decks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.deck-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.deck-card:hover {
+  transform: translateY(-3px);
+}
+
+.deck-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.deck-card p {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.progress-text {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.deck-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-open {
+  background-color: var(--primary);
+  color: white;
+  flex: 1;
+}
+
+.btn-open:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: var(--danger);
+  border: 1.5px solid var(--danger);
+  padding: 8px 14px;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-light);
+  padding: 60px 0;
+  font-size: 16px;
+}
