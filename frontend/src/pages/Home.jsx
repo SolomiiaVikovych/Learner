@@ -31,9 +31,18 @@ function Home() {
     fetchDecks()
   }
 
+  const handleLogout = () => {
+    localStorage.removeItem('access_token')
+    localStorage.removeItem('refresh_token')
+    navigate('/login')
+  }
+
   return (
     <div className='home'>
-      <h1>My Decks</h1>
+      <div className='home-header'>
+        <h1>My Decks</h1>
+        <button className='btn-logout' onClick={handleLogout}>Log Out</button>
+      </div>
 
       <div className='create-form'>
         <h2>Create New Deck</h2>
