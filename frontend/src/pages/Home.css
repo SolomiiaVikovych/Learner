@@ -1,11 +1,11 @@
 .home {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 24px;
 }
 
-.home h1 {
-  font-size: 32px;
+.home-title {
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 32px;
   color: var(--text);
@@ -23,7 +23,8 @@
 }
 
 .create-form h2 {
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 600;
   margin-bottom: 4px;
   color: var(--text);
 }
@@ -32,6 +33,7 @@
   background-color: var(--primary);
   color: white;
   align-self: flex-start;
+  padding: 10px 24px;
 }
 
 .btn-primary:hover {
@@ -40,93 +42,90 @@
 
 .decks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
 
 .deck-card {
-  background: var(--surface);
+  background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  transition: transform 0.2s;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
 }
 
 .deck-card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-.deck-card h3 {
+.deck-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.deck-card-top h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.deck-info-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--text);
 }
 
 .deck-card p {
-  color: var(--text-light);
-  font-size: 14px;
-}
-
-.progress-text {
   font-size: 13px;
-  color: var(--primary);
-  font-weight: 600;
+  color: var(--text-light);
+  line-height: 1.5;
 }
 
-.deck-actions {
+.deck-card-actions {
   display: flex;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
-.btn-open {
-  background-color: var(--primary);
+.btn-deck-delete {
+  background: transparent;
+  color: #c0392b;
+  border: 1.5px solid #c0392b;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: var(--radius);
+}
+
+.btn-deck-delete:hover {
+  background: #c0392b;
   color: white;
-  flex: 1;
 }
 
-.btn-open:hover {
-  background-color: var(--primary-dark);
+.deck-progress-bar-track {
+  background: rgba(255,255,255,0.5);
+  border-radius: 999px;
+  height: 6px;
+  margin-top: 4px;
 }
 
-.btn-danger {
-  background-color: transparent;
-  color: var(--danger);
-  border: 1.5px solid var(--danger);
-  padding: 8px 14px;
-}
-
-.btn-danger:hover {
-  background-color: var(--danger);
-  color: white;
+.deck-progress-bar-fill {
+  background: var(--primary);
+  height: 6px;
+  border-radius: 999px;
+  transition: width 0.4s ease;
 }
 
 .empty-state {
   text-align: center;
   color: var(--text-light);
-  padding: 60px 0;
+  padding: 80px 0;
   font-size: 16px;
-}
-.home-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
-}
-
-.home-header h1 {
-  margin-bottom: 0;
-}
-
-.btn-logout {
-  background: transparent;
-  color: var(--text-light);
-  border: 1.5px solid var(--border);
-  font-size: 14px;
-}
-
-.btn-logout:hover {
-  background: var(--border);
 }

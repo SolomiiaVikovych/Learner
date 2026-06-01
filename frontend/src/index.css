@@ -5,16 +5,17 @@
 }
 
 :root {
-  --primary: #6c63ff;
-  --primary-dark: #574fd6;
-  --danger: #ff4d4d;
-  --danger-dark: #e53935;
-  --success: #4caf50;
-  --background: #f4f6fb;
+  --primary: #2a8080;
+  --primary-dark: #1f6060;
+  --accent: #f0a500;
+  --accent-dark: #d4920a;
+  --background: #f0f4f8;
   --surface: #ffffff;
+  --card-bg: #b8d4e8;
+  --navbar-bg: #b8d4e8;
   --text: #1a1a2e;
-  --text-light: #6b7280;
-  --border: #e0e0e0;
+  --text-light: #5a6a7a;
+  --border: #d0e4f0;
   --radius: 12px;
   --shadow: 0 2px 12px rgba(0,0,0,0.08);
 }

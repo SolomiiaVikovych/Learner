@@ -4,6 +4,8 @@ import DeckDetail from './pages/DeckDetail'
 import Study from './pages/Study'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Landing from './pages/Landing'
+import Navbar from './components/Navbar'
 
 function PrivateRoute({ children }) {
   const token = localStorage.getItem('access_token')
@@ -13,7 +15,9 @@ function PrivateRoute({ children }) {
 function App() {
   return (
     <div>
+      <Navbar />
       <Routes>
+        <Route path='/landing' element={<Landing />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/' element={<PrivateRoute><Home /></PrivateRoute>} />
