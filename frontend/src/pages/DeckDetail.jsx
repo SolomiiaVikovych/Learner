@@ -75,6 +75,7 @@ function DeckDetail() {
         <div className='deck-meta'>
           <span className='progress-text'>{deck.known_count} / {deck.card_count} cards known</span>
           <button className='btn-study' onClick={() => navigate(`/study/${id}`)}>Study this deck</button>
+          <button className='btn-stats' onClick={() => navigate(`/stats/${id}`)}>📊 Statistics</button>
         </div>
       </div>
 
@@ -96,6 +97,7 @@ function DeckDetail() {
 
       <div className='cards-list'>
         <h2>Cards ({cards.length})</h2>
+        <div className='cards-grid'>
         {cards.map(card => (
           <div className='card-item' key={card.id}>
             {editingCard === card.id ? (
@@ -120,7 +122,7 @@ function DeckDetail() {
                   <h3>{card.term}</h3>
                   <p>{card.explanation}</p>
                   <p className={`card-status ${card.is_known ? '' : 'unknown'}`}>
-                    {card.is_known ? '✅ Known' : '❌ Not yet known'}
+                    {card.is_known ? ' Known' : ' Not yet known'}
                   </p>
                 </div>
                 <div className='card-item-actions'>
@@ -131,6 +133,7 @@ function DeckDetail() {
             )}
           </div>
         ))}
+        </div>
       </div>
     </div>
   )

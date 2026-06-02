@@ -1,19 +1,92 @@
-.card-item-actions {
+.cards-list {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.cards-list h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card-item {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.card-item:hover {
+  transform: translateY(-2px);
+}
+
+.card-content h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card-content p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.card-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.card-status.unknown {
+  color: var(--text-light);
+}
+
+.card-item-actions {
+  display: flex;
   gap: 8px;
-  flex-shrink: 0;
+  margin-top: 8px;
 }
 
 .btn-edit {
   background: transparent;
   color: var(--primary);
   border: 1.5px solid var(--primary);
-  padding: 8px 14px;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: var(--radius);
+  flex: 1;
 }
 
 .btn-edit:hover {
   background: var(--primary);
+  color: white;
+}
+
+.btn-danger {
+  background: transparent;
+  color: #c0392b;
+  border: 1.5px solid #c0392b;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: var(--radius);
+  flex: 1;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
   color: white;
 }
 
@@ -27,4 +100,16 @@
 .edit-actions {
   display: flex;
   gap: 8px;
+}
+.btn-stats {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-stats:hover {
+  background: var(--primary);
+  color: white;
 }

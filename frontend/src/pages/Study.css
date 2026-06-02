@@ -172,3 +172,96 @@
   gap: 12px;
   margin-top: 16px;
 }
+.flashcard-wrapper {
+  width: 100%;
+  max-width: 500px;
+  height: 260px;
+  perspective: 1000px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.flashcard-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.flashcard-front p,
+.flashcard-back p {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.flashcard-back .explanation-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+}
+.study-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.due-badge {
+  background: var(--accent);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.finished-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px 48px;
+  gap: 4px;
+}
+
+.score-number {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.score-label {
+  font-size: 15px;
+  color: var(--text-light);
+}
